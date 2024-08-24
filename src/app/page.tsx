@@ -1,20 +1,16 @@
+// app/page.tsx
 "use client";
-import React, { useEffect } from "react";
+
+import React from "react";
 import styles from "./page.module.css";
 import SplashScreen from "./components/Splash";
-import { useRouter } from "next/router";
-import "antd/dist/reset.css"; 
-import { Flex, Layout } from 'antd';
-import { Spin } from "antd";
-
+import ExplorePage from "./Explore/Explore"; // Make sure this path is correct
 
 export default function Home() {
-  
   return (
     <main className={styles.main}>
-      
-      <SplashScreen/>
-      
+      {/* <SplashScreen /> */}
+      <ExplorePage />
     </main>
   );
 }

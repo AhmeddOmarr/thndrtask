@@ -1,30 +1,32 @@
 "use client";
+
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { Spin } from "antd";
 import "antd/dist/reset.css";
-import "antd/dist/reset.css"; // Ensure this is imported globally or in your app's entry point
 
 const SplashScreen: React.FC = () => {
   const router = useRouter();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      router.push("/explore"); // Navigate to the main explore screen
-    }, 3000); // 3 seconds
+      router.push("/explore"); // Correct path for internal navigation
+    }, 3000);
 
-    return () => clearTimeout(timer); // Cleanup the timer on unmount
+    return () => clearTimeout(timer);
   }, [router]);
 
   return (
     <div style={styles.container}>
       <div style={styles.logoContainer}>
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/NASDAQ_Logo.svg/1200px-NASDAQ_Logo.svg.png" 
-          alt="NASDAQ_Logo.svg.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/NASDAQ_Logo.svg/1200px-NASDAQ_Logo.svg.png"
+          alt="NASDAQ Logo"
           style={styles.logo}
         />
-        <Spin size="large" style={styles.spinner} />
+        <div style={{ marginTop: "20px" }}>
+          <Spin size="large" />
+        </div>
       </div>
       <div style={styles.developerName}>Ahmed Omar</div>
     </div>
@@ -38,7 +40,8 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    backgroundColor: "blue",
+    width: "100vw",
+    backgroundColor: "grey",
   },
   logoContainer: {
     display: "flex",
@@ -50,9 +53,6 @@ const styles = {
     width: "150px",
     height: "auto",
     marginBottom: "20px",
-  },
-  spinner: {
-    marginTop: "20px",
   },
   developerName: {
     position: "absolute" as const,

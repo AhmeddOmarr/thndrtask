@@ -1,10 +1,13 @@
+"use client";
 import React from 'react';
 import { Flex, Layout } from 'antd';
 
 const { Header, Footer, Sider, Content } = Layout;
 
 const headerStyle: React.CSSProperties = {
-  textAlign: 'center',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
   color: '#fff',
   height: 64,
   paddingInline: 48,
@@ -43,13 +46,27 @@ const layoutStyle = {
 const layout: React.FC = () => (
   <Flex gap="middle" wrap>
     <Layout style={layoutStyle}>
-      <Header style={headerStyle}>Welcome to NASDAQ.</Header>
+      <Header style={headerStyle}>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/NASDAQ_Logo.svg/1200px-NASDAQ_Logo.svg.png" 
+          alt="NASDAQ Logo"
+          style={{ width: '100px', marginRight: '16px' }}
+        />
+        Welcome to NASDAQ.
+      </Header>
       <Content style={contentStyle}>Content</Content>
       <Footer style={footerStyle}>Footer</Footer>
     </Layout>
 
     <Layout style={layoutStyle}>
-      <Header style={headerStyle}>Header</Header>
+      <Header style={headerStyle}>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/NASDAQ_Logo.svg/1200px-NASDAQ_Logo.svg.png" 
+          alt="NASDAQ Logo"
+          style={{ width: '100px', marginRight: '16px' }}
+        />
+        Header
+      </Header>
       <Layout>
         <Sider width="25%" style={siderStyle}>
           Sider
@@ -60,7 +77,14 @@ const layout: React.FC = () => (
     </Layout>
 
     <Layout style={layoutStyle}>
-      <Header style={headerStyle}>Header</Header>
+      <Header style={headerStyle}>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/NASDAQ_Logo.svg/1200px-NASDAQ_Logo.svg.png" 
+          alt="NASDAQ Logo"
+          style={{ width: '100px', marginRight: '16px' }}
+        />
+        Header
+      </Header>
       <Layout>
         <Content style={contentStyle}>Content</Content>
         <Sider width="25%" style={siderStyle}>
@@ -75,7 +99,14 @@ const layout: React.FC = () => (
         Sider
       </Sider>
       <Layout>
-        <Header style={headerStyle}>Header</Header>
+        <Header style={headerStyle}>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/NASDAQ_Logo.svg/1200px-NASDAQ_Logo.svg.png" 
+            alt="NASDAQ Logo"
+            style={{ width: '100px', marginRight: '16px' }}
+          />
+          Header
+        </Header>
         <Content style={contentStyle}>Content</Content>
         <Footer style={footerStyle}>Footer</Footer>
       </Layout>
