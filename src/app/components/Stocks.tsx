@@ -103,7 +103,7 @@ const StocksList: React.FC = () => {
           >
             <Card
               hoverable
-              style={{ width: 480, margin: '10px' }}
+              style={{ width: 300, margin: '10px' }}
             >
               <Meta
                 title={stock.name}
