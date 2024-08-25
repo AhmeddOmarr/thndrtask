@@ -1,21 +1,9 @@
 "use client";
-
-import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import React from "react";
 import { Spin } from "antd";
 import "antd/dist/reset.css";
 
 const SplashScreen: React.FC = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("/explore"); // Correct path for internal navigation
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  }, [router]);
-
   return (
     <div style={styles.container}>
       <div style={styles.logoContainer}>
@@ -41,7 +29,7 @@ const styles = {
     alignItems: "center",
     height: "100vh",
     width: "100vw",
-    backgroundColor: "grey",
+    
   },
   logoContainer: {
     display: "flex",
@@ -59,7 +47,7 @@ const styles = {
     bottom: "20px",
     textAlign: "center" as const,
     fontSize: "14px",
-    color: "#888",
+    color: "#1a1a1a",
   },
 };
 

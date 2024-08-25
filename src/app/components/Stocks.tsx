@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useRef, useCallback } from "react";
 import Card from "antd/lib/card";
 import "antd/dist/reset.css";
